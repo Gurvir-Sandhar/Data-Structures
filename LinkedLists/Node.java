@@ -1,3 +1,6 @@
+/**
+ * List Node that contains an integer value and a reference to the next Node.
+ */
 public class Node {
     int val;
     Node next;
@@ -12,12 +15,15 @@ public class Node {
         next = null;
     }
 
-    public Node(int x, Node y){
-        val = x;
-        next = y;
-    }
-
     public int getVal(){
         return val;
+    }
+
+    public Node next(){
+        return next;
+    }
+
+    public void addNext(Node x){
+        next = x;
     }
 }
