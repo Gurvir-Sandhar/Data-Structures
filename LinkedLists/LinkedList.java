@@ -1,14 +1,16 @@
 /**
- * Singly linked list class contains a reference to the head of the list.
+ * Singly Linked List class contains a reference to the head of the list and the length.
  */
 public class LinkedList {
-    Node head;
+    private Node head;
+    private int length;
 
     /**
      * Default Constructor
      */
     public LinkedList(){
         head = null;
+        length = 0;
     }
 
     /**
@@ -17,6 +19,7 @@ public class LinkedList {
      */
     public LinkedList(Node x){
         head = x;
+        length += 1;
     }
 
     /**
@@ -33,6 +36,7 @@ public class LinkedList {
             }
             current.addNext(x);
         }
+        length += 1;
     }
 
     /**
@@ -50,6 +54,7 @@ public class LinkedList {
             Node newNode = new Node(x);
             current.addNext(newNode);
         }
+        length += 1;
     }
 
     /**
