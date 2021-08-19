@@ -2,6 +2,7 @@
  * Singly Linked List class contains a reference to the head of the list and the length.
  */
 public class LinkedList {
+
     private Node head;
     private int length;
 
@@ -69,6 +70,38 @@ public class LinkedList {
                 System.out.print(current.getVal() + "->");
             }
             current = current.next();
+        }
+    }
+
+    /**
+     * Removes Node at given index
+     * @param x Index of Node to remove
+     */
+    public void remove(int x){
+        if(x == 1){
+            head = head.next();
+        } else {
+            Node current = head;
+            for(int i = 2; i < x; i++){
+                current = current.next();
+            }
+            if(x == length){
+                current.addNext();
+            } else {
+                current.addNext(current.next().next());
+            }
+        }
+    }
+
+    /**
+     * Returns Head of List
+     * @return  Head Node if it exists
+     */
+    public Node getHead(){
+        if(head != null){
+            return head;
+        } else {
+            return null;
         }
     }
 }

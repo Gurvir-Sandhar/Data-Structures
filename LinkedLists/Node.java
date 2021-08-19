@@ -23,6 +23,10 @@ public class Node {
         return next;
     }
 
+    public void addNext(){
+        next = null;
+    }
+
     public void addNext(Node x){
         next = x;
     }
