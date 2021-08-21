@@ -91,6 +91,32 @@ public class LinkedList {
                 current.addNext(current.next().next());
             }
         }
+        length--;
+    }
+
+    /**
+     *  Remove all Nodes that have a value of x 
+     * @param x value to remove from list
+     */
+    public void removeAll(int x){
+        while(head.getVal() == x){
+            head = head.next();
+            length--;
+        }
+        Node current = head;
+        for(int i = 2; i <= length; i++){
+            if(current.next().getVal() == x){
+                if(i == length){
+                    current.addNext();
+                    length--;
+                }else{
+                    Node temp = current.next().next();
+                    current.addNext(temp);
+                    length--;
+                }
+            }
+            current = current.next();
+        }
     }
 
     /**
