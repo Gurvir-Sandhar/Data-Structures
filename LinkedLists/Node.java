@@ -23,11 +23,11 @@ public class Node {
         return next;
     }
 
-    public void addNext(){
+    public void setNext(){
         next = null;
     }
 
-    public void addNext(Node x){
+    public void setNext(Node x){
         next = x;
     }
 }

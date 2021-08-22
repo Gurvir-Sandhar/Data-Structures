@@ -35,7 +35,7 @@ public class LinkedList {
             while(current.next() != null){
                 current = current.next();
             }
-            current.addNext(x);
+            current.setNext(x);
         }
         length += 1;
     }
@@ -53,7 +53,7 @@ public class LinkedList {
                 current = current.next();
             }
             Node newNode = new Node(x);
-            current.addNext(newNode);
+            current.setNext(newNode);
         }
         length += 1;
     }
@@ -86,9 +86,9 @@ public class LinkedList {
                 current = current.next();
             }
             if(x == length){
-                current.addNext();
+                current.setNext();
             } else {
-                current.addNext(current.next().next());
+                current.setNext(current.next().next());
             }
         }
         length--;
@@ -107,11 +107,11 @@ public class LinkedList {
         for(int i = 2; i <= length; i++){
             if(current.next().getVal() == x){
                 if(i == length){
-                    current.addNext();
+                    current.setNext();
                     length--;
                 }else{
                     Node temp = current.next().next();
-                    current.addNext(temp);
+                    current.setNext(temp);
                     length--;
                 }
             }
