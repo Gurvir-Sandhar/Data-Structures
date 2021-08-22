@@ -15,6 +15,10 @@ public class Node {
         next = null;
     }
 
+    public Node(Node x){
+        this.val = x.val;
+    }
+
     public int getVal(){
         return val;
     }
